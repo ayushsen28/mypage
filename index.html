@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ravi Jha — MERN Stack Developer and Computer Science Engineering student from Daman, India. Building practical full-stack projects." />
+  <meta name="keywords" content="Ravi Jha, MERN Stack, Full Stack Developer, React, Node.js, Portfolio" />
+  <meta name="author" content="Ravi Jha" />
+  <meta name="theme-color" content="#07070c" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Ravi Jha — MERN Stack Developer" />
+  <meta property="og:description" content="Building Digital Experiences Through Code." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title>Ravi Jha — MERN Stack Developer | Aspiring Software Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/font/lucide.min.css" />
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Ambient background -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-orb ambient-orb--1"></div>
+    <div class="ambient-orb ambient-orb--2"></div>
+    <div class="ambient-orb ambient-orb--3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="nav-wrap">
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#home" class="nav__logo" aria-label="Ravi Jha — home">
+        <span class="nav__logo-mark">RJ</span>
+        <span class="nav__logo-text">Ravi Jha</span>
+      </a>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#home" class="nav__link" data-nav="home">Home</a></li>
+        <li><a href="#about" class="nav__link" data-nav="about">About</a></li>
+        <li><a href="#skills" class="nav__link" data-nav="skills">Skills</a></li>
+        <li><a href="#projects" class="nav__link" data-nav="projects">Projects</a></li>
+        <li><a href="#education" class="nav__link" data-nav="education">Education</a></li>
+        <li><a href="#contact" class="nav__link" data-nav="contact">Contact</a></li>
+        <li class="nav__cta-wrap"><a href="#contact" class="nav__link nav__cta">Let's Talk</a></li>
+      </ul>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <span class="hero__badge">
+            <span class="dot" aria-hidden="true"></span>
+            Computer Science Engineering Student
+          </span>
+          <h1 id="hero-title" class="hero__title">
+            Building <span class="gradient-text">Digital Experiences</span> Through Code.
+          </h1>
+          <p class="hero__name">Ravi Jha</p>
+          <p class="hero__subtitle">
+            MERN Stack Developer &amp; Aspiring Software Engineer from Daman, India.
+            I craft clean, responsive web experiences and sharpen my fundamentals through Data Structures &amp; Algorithms.
+          </p>
+          <p class="hero__tagline">ALWAYS LEARNING. ALWAYS BUILDING.</p>
+
+          <div class="hero__ctas">
+            <a href="#projects" class="btn btn--primary">
+              <i data-lucide="rocket" aria-hidden="true"></i>
+              <span>Explore My Projects</span>
+            </a>
+            <a href="#contact" class="btn btn--ghost">
+              <i data-lucide="message-circle" aria-hidden="true"></i>
+              <span>Let's Connect</span>
+            </a>
+          </div>
+
+          <div class="hero__socials" aria-label="Social profiles">
+            <a href="#" id="ghLink" class="social-pill" target="_blank" rel="noopener" aria-label="GitHub">
+              <i data-lucide="github" aria-hidden="true"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="#" id="liLink" class="social-pill" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i data-lucide="linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__3d" aria-hidden="true">
+          <canvas id="hero3d" class="hero__canvas"></canvas>
+          <div class="hero__3d-fallback" id="hero3dFallback">
+            <i data-lucide="atom" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+        <span>Scroll</span>
+        <div class="scroll-indicator__mouse">
+          <div class="scroll-indicator__wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">01 — Introduction</span>
+          <h2 id="about-title" class="section__title">A Little About Me</h2>
+          <p class="section__lead">Curious by nature, disciplined by code.</p>
+        </header>
+
+        <div class="about-grid">
+          <article class="glass-card about-card reveal">
+            <h3 class="about-card__title">Who I Am</h3>
+            <p>
+              I'm <strong>Ravi Jha</strong>, a second-year Computer Science Engineering student at
+              <em>Laxmi Institute of Technology</em>, currently based in <em>Daman, Daman and Diu, India</em>.
+            </p>
+            <p>
+              My journey into software began with curiosity and has grown into a focused pursuit of building
+              practical, real-world applications. I'm actively learning the <strong>MERN Stack</strong>
+              (MongoDB, Express.js, React.js, Node.js) and sharpening my problem-solving skills through
+              <strong>Java and Data Structures &amp; Algorithms</strong>.
+            </p>
+            <p>
+              I believe great engineers are built through consistent practice, honest code, and meaningful
+              projects — and that's exactly what I'm working on every day.
+            </p>
+          </article>
+
+          <aside class="glass-card about-card about-card--meta reveal">
+            <h3 class="about-card__title">Quick Profile</h3>
+            <ul class="meta-list">
+              <li>
+                <i data-lucide="graduation-cap" aria-hidden="true"></i>
+                <div><strong>Education</strong><span>B.Tech — Computer Science Engineering (2nd Year)</span></div>
+              </li>
+              <li>
+                <i data-lucide="school" aria-hidden="true"></i>
+                <div><strong>Institute</strong><span>Laxmi Institute of Technology</span></div>
+              </li>
+              <li>
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                <div><strong>Location</strong><span>Daman, Daman and Diu, India</span></div>
+              </li>
+              <li>
+                <i data-lucide="heart" aria-hidden="true"></i>
+                <div><strong>Interests</strong><span>Full-Stack Development, Software Engineering, Problem Solving</span></div>
+              </li>
+              <li>
+                <i data-lucide="book-open" aria-hidden="true"></i>
+                <div><strong>Currently Learning</strong><span>DSA using Java · MERN Stack</span></div>
+              </li>
+              <li>
+                <i data-lucide="target" aria-hidden="true"></i>
+                <div><strong>Goal</strong><span>Build strong technical skills, ship meaningful projects, and grow as a software engineer.</span></div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">02 — Toolkit</span>
+          <h2 id="skills-title" class="section__title">Technical Skills</h2>
+          <p class="section__lead">The technologies I work with and continue to learn.</p>
+        </header>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Frontend -->
+          <div class="skill-group reveal">
+            <h3 class="skill-group__title">
+              <i data-lucide="monitor" aria-hidden="true"></i>
+              <span>Frontend</span>
+            </h3>
+            <ul class="skill-group__list">
+              <li class="skill-card" data-tilt><i data-lucide="code-2" aria-hidden="true"></i><span>HTML5</span></li>
+              <li class="skill-card" data-tilt><i data-lucide="palette" aria-hidden="true"></i><span>CSS3</span></li>
+              <li class="skill-card" data-tilt><i data-lucide="braces" aria-hidden="true"></i><span>JavaScript</span></li>
+              <li class="skill-card" data-tilt><i data-lucide="atom" aria-hidden="true"></i><span>React.js</span></li>
+            </ul>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-group reveal">
+            <h3 class="skill-group__title">
+              <i data-lucide="server" aria-hidden="true"></i>
+              <span>Backend</span>
+            </h3>
+            <ul class="skill-group__list">
+              <li class="skill-card" data-tilt><i data-lucide="hexagon" aria-hidden="true"></i><span>Node.js</span></li>
+              <li class="skill-card" data-tilt><i data-lucide="route" aria-hidden="true"></i><span>Express.js</span></li>
+              <li class="skill-card" data-tilt><i data-lucide="network" aria-hidden="true"></i><span>REST APIs</span></li>
+            </ul>
+          </div>
+
+          <!-- Database -->
+          <div class="skill-group reveal">
+            <h3 class="skill-group__title">
+              <i data-lucide="database" aria-hidden="true"></i>
+              <span>Database</span>
+            </h3>
+            <ul class="skill-group__list">
+              <li class="skill-card" data-tilt><i data-lucide="leaf" aria-hidden="true"></i><span>MongoDB</span></li>
+            </ul>
+          </div>
+
+          <!-- CS / Problem Solving -->
+          <div class="skill-group reveal">
+            <h3 class="skill-group__title">
+              <i data-lucide="brain-circuit" aria-hidden="true"></i>
+              <span>Programming &amp; CS</span>
+            </h3>
+            <ul class="skill-group__list">
+              <li class="skill-card" data-tilt><i data-lucide="coffee" aria-hidden="true"></i><span>Java</span></li>
+              <li class="skill-card" data-tilt><i data-lucide="binary" aria-hidden="true"></i><span>DSA</span></li>
+              <li class="skill-card" data-tilt><i data-lucide="lightbulb" aria-hidden="true"></i><span>Problem Solving</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">03 — Work</span>
+          <h2 id="projects-title" class="section__title">Featured Projects</h2>
+          <p class="section__lead">Shipped, deployed, and built with care.</p>
+        </header>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Cards injected via JS from CONFIG -->
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education" aria-labelledby="edu-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">04 — Journey</span>
+          <h2 id="edu-title" class="section__title">Education</h2>
+          <p class="section__lead">The foundation behind the code.</p>
+        </header>
+
+        <div class="timeline">
+          <div class="timeline__item reveal">
+            <div class="timeline__marker"><i data-lucide="graduation-cap" aria-hidden="true"></i></div>
+            <div class="timeline__card glass-card">
+              <span class="timeline__tag">Currently Pursuing</span>
+              <h3>B.Tech — Computer Science Engineering</h3>
+              <p class="timeline__inst">Laxmi Institute of Technology</p>
+              <p class="timeline__year">Second Year · Ongoing</p>
+              <p class="timeline__desc">
+                Building core foundations in programming, data structures, and software engineering while
+                applying concepts through hands-on full-stack projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEARNING JOURNEY -->
+    <section class="section" id="learning" aria-labelledby="learn-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">05 — In Progress</span>
+          <h2 id="learn-title" class="section__title">Currently Learning &amp; Building</h2>
+          <p class="section__lead">The work that keeps me growing.</p>
+        </header>
+
+        <div class="learning-grid">
+          <article class="learn-card glass-card reveal">
+            <i data-lucide="coffee" aria-hidden="true"></i>
+            <h3>Java &amp; DSA</h3>
+            <p>Strengthening algorithmic thinking and problem-solving through Java-based Data Structures &amp; Algorithms practice.</p>
+          </article>
+          <article class="learn-card glass-card reveal">
+            <i data-lucide="layers" aria-hidden="true"></i>
+            <h3>MERN Stack</h3>
+            <p>Deepening my understanding of MongoDB, Express, React, and Node to build complete full-stack applications end-to-end.</p>
+          </article>
+          <article class="learn-card glass-card reveal">
+            <i data-lucide="hammer" aria-hidden="true"></i>
+            <h3>Practical Projects</h3>
+            <p>Turning ideas into deployed products — shipping real code that solves real problems.</p>
+          </article>
+          <article class="learn-card glass-card reveal">
+            <i data-lucide="trending-up" aria-hidden="true"></i>
+            <h3>Software Engineer Mindset</h3>
+            <p>Cultivating clean code habits, reading documentation deeply, and thinking like an engineer.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__eyebrow">06 — Connect</span>
+          <h2 id="contact-title" class="section__title">Let's Build Something Great</h2>
+          <p class="section__lead">Have a project idea, a question, or just want to say hi? I'd love to hear from you.</p>
+        </header>
+
+        <div class="contact-grid">
+          <aside class="glass-card contact-info reveal">
+            <h3>Reach out directly</h3>
+            <ul class="contact-list">
+              <li>
+                <i data-lucide="mail" aria-hidden="true"></i>
+                <div>
+                  <strong>Email</strong>
+                  <a id="emailLink" href="mailto:placeholder@example.com">placeholder@example.com</a>
+                </div>
+              </li>
+              <li>
+                <i data-lucide="github" aria-hidden="true"></i>
+                <div>
+                  <strong>GitHub</strong>
+                  <a id="contactGhLink" href="#" target="_blank" rel="noopener">github.com/your-username</a>
+                </div>
+              </li>
+              <li>
+                <i data-lucide="linkedin" aria-hidden="true"></i>
+                <div>
+                  <strong>LinkedIn</strong>
+                  <a id="contactLiLink" href="#" target="_blank" rel="noopener">linkedin.com/in/your-username</a>
+                </div>
+              </li>
+              <li>
+                <i data-lucide="map-pin" aria-hidden="true"></i>
+                <div>
+                  <strong>Location</strong>
+                  <span>Daman, Daman and Diu, India</span>
+                </div>
+              </li>
+            </ul>
+          </aside>
+
+          <form class="glass-card contact-form reveal" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
+              <span class="field__error" data-for="name"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+              <span class="field__error" data-for="email"></span>
+            </div>
+            <div class="field">
+              <label for="subject">Subject <span aria-hidden="true">*</span></label>
+              <input type="text" id="subject" name="subject" required />
+              <span class="field__error" data-for="subject"></span>
+            </div>
+            <div class="field">
+              <label for="message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <span class="field__error" data-for="message"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+              <i data-lucide="send" aria-hidden="true"></i>
+              <span>Send Message</span>
+            </button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">RJ</div>
+        <p class="footer__tagline">Always Learning. Always Building.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer__socials" aria-label="Social links">
+        <a href="#" id="footGh" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github" aria-hidden="true"></i></a>
+        <a href="#" id="footLi" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin" aria-hidden="true"></i></a>
+        <a href="#" id="footMail" aria-label="Email"><i data-lucide="mail" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="footer__base container">
+      <p>&copy; <span id="year"></span> Ravi Jha. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i data-lucide="arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Three.js CDN (deferred) -->
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"
+          onerror="window.__threeFailed = true"></script>
+  <script src="https://unpkg.com/lucide-static@0.344.0/dist/umd/lucide.min.js"
+          onerror="window.__lucideFailed = true"></script>
+  <script src="script.js"></script>
+</body>
+</html>
